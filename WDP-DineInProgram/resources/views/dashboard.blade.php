@@ -161,6 +161,18 @@
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+  <div class="mb-4">
+        <h2 class="display-4 fw-bold text-primary">FEEDBACK</h2>
+        <p class="lead text-muted">WDP Telkom University</p>
+    </div>
+    
+    <!-- Create Feedback Button -->
+    <a href="/feedback/create" class="text-decoration-none">
+        <button type="button" class="btn btn-primary btn-lg shadow rounded-pill px-4 py-2">
+            <i class="fas fa-pen me-2"></i> Buat Feedback
+        </button>
+    </a>
 
   <!-- Preloader -->
   <div id="preloader"></div>

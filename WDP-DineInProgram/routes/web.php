@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RestoranController;
-
+use App\Http\Controllers\FeedbackController;
 
 Route::get('/', function () {
     return view ('dashboard');
@@ -36,3 +36,5 @@ Route::get('restoran/{restoran}/edit', [RestoranController::class, 'edit'])->nam
 Route::put('restoran/{restoran}', [RestoranController::class, 'update'])->name('restoran.update');
 Route::delete('restoran/{restoran}', [RestoranController::class, 'destroy'])->name('restoran.destroy');
 
+// Route Feedback
+Route::resource('feedback', FeedbackController::class);
