@@ -6,7 +6,7 @@
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">
-            <h2 class="text-center mb-5 text-primary">Feedback Detail bro</h2>
+            <h2 class="text-center mb-5 text-primary">Feedback Detail</h2>
 
             <!-- Display feedback details -->
             <div class="card shadow-lg border-0 rounded-lg" data-aos="fade-up" data-aos-delay="200">
