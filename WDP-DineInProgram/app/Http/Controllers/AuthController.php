@@ -128,5 +128,47 @@ class AuthController extends Controller
 
         return redirect()->route('auth.index')->with('success', 'pemilik toko berhasil dihapus.');
     }
+
+    public function exportPdf()
+    {
+        $admins = Admin::all();
+
+        // Buat konten HTML untuk file PDF
+        $html = '<html>
+        <head><title>Admin Report</title></head>
+        <body>
+        <h1>Admin Report</h1>
+        <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        </thead>
+        <tbody>';
+        
+        foreach ($admins as $index => $admin) {
+            $html .= '<tr>
+            <td>' . ($index + 1) . '</td>
+            <td>' . $admin->nama . '</td>
+            <td>' . $admin->email . '</td>
+            <td>' . $admin->no_hp . '</td>
+            </tr>';
+        }
+
+        $html .= '</tbody></table></body></html>';
+
+        // Set header untuk download file sebagai PDF
+        header('Content-Type: application/pdf');
+        header('Content-Disposition: attachment; filename="admin-report.pdf"');
+
+        // Konversi HTML ke PDF dengan built-in PDF renderer seperti `wkhtmltopdf` atau sejenisnya.
+        echo $html;
+        exit;
+    }
+
+    
 }
 

@@ -25,6 +25,7 @@ Route::get('/auth/{admin}', [AuthController::class, 'show'])->name('auth.show');
 Route::get('/auth/{admin}/edit', [AuthController::class, 'edit'])->name('auth.edit');
 Route::put('/auth/{admin}', [AuthController::class, 'update'])->name('auth.update');
 Route::delete('/auth/{admin}', [AuthController::class, 'destroy'])->name('auth.destroy');
+Route::get('/admin/export-pdf', [AuthController::class, 'exportPdf'])->name('exportpdf.index');
 
 // Route Restoran
 Route::get('restoran', [RestoranController::class, 'index'])->name('restoran.index');

@@ -43,4 +43,5 @@
             </table>
         @endif
     </div>
+    <a class="btn-print" href="{{ route('exportpdf.index') }}">PRINT</a>
 </div>
