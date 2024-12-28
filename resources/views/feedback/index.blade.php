@@ -3,7 +3,7 @@
 @section('title', 'Feedbacks List')
 
 @section('content')
-<div class="container my-5">
+<div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">
             <div class="text-center mb-5">

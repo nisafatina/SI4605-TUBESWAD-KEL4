@@ -3,10 +3,10 @@
 @section('title', 'Edit Feedback')
 
 @section('content')
-<div class="container">
+<div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">
-            <h2 class="text-center mb-4 text-primary font-weight-bold">Edit Feedback</h2>
+            <h2 class="text-center mb-5 text-primary font-weight-bold">Edit Feedback</h2>
 
             <!-- Form edit feedback -->
             <form action="{{ route('feedback.update', $feedback->id) }}" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="d-flex justify-content-between">
-                    <button type="submit" class="btn btn-primary px-5 py-3 shadow-sm rounded-pill">Update Feedback</button>
+                    <button type="submit" class="btn btn-custom px-5 py-3 shadow-sm rounded-pill">Update Feedback</button>
                     <a href="{{ route('feedback.index') }}" class="btn btn-secondary px-5 py-3 shadow-sm rounded-pill">Cancel</a>
                 </div>
             </form>
@@ -60,6 +60,7 @@
 
 @section('styles')
 <style>
+    /* Form Styling */
     .php-email-form {
         padding: 40px;
         background-color: #f1f6fc;
@@ -73,7 +74,7 @@
     }
 
     .php-email-form .form-control {
-        border-radius: 10px;
+        border-radius: 12px;
         box-shadow: none;
         font-size: 16px;
         padding: 12px 20px;
@@ -86,11 +87,12 @@
         box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
     }
 
+    /* Button Styling */
     .php-email-form button[type="submit"],
     .php-email-form a {
         font-size: 18px;
         padding: 12px 40px;
-        border-radius: 50px;
+        border-radius: 30px;
         font-weight: bold;
         transition: all 0.3s ease;
     }
@@ -122,6 +124,23 @@
         .php-email-form a {
             padding: 10px 30px;
         }
+    }
+
+    /* Button Custom */
+    .btn-custom {
+        background-color: #ffcc00;
+        color: #fff;
+        border-radius: 30px;
+        padding: 12px 36px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        border: none;
+    }
+
+    .btn-custom:hover {
+        background-color: #e5b800;
+        transform: translateY(-3px);
     }
 
     /* Improved input and button styling */

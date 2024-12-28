@@ -17,7 +17,7 @@
                     <p class="mb-4"><strong>Feedback:</strong> {{ $feedback->feedback }}</p>
 
                     <!-- Back to Feedback List Button -->
-                    <a href="{{ route('feedback.index') }}" class="btn btn-outline-primary shadow-sm">
+                    <a href="{{ route('feedback.index') }}" class="btn btn-custom mt-4">
                         <i class="bi bi-arrow-left-circle"></i> Back to Feedback List
                     </a>
                 </div>
@@ -31,13 +31,13 @@
 <style>
     /* Container */
     .container {
-        margin-top: 60px;
+        margin-top: 80px;
     }
 
     /* Card Styling */
     .card {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border-radius: 15px;
+        border-radius: 12px;
     }
 
     /* Card Hover Effect */
@@ -50,7 +50,7 @@
     .card-body {
         padding: 40px;
         background-color: #f8f9fa;
-        border-radius: 15px;
+        border-radius: 12px;
     }
 
     /* Title Styling */
@@ -61,18 +61,20 @@
     }
 
     /* Button Styling */
-    .btn-outline-primary {
-        font-size: 16px;
-        padding: 12px 28px;
+    .btn-custom {
+        background-color: #ffcc00;
+        color: #fff;
         border-radius: 30px;
-        border: 2px solid #007bff;
-        transition: all 0.3s ease;
+        padding: 12px 36px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        border: none;
     }
 
-    .btn-outline-primary:hover {
-        background-color: #007bff;
-        color: white;
-        border-color: #007bff;
+    .btn-custom:hover {
+        background-color: #e5b800;
+        transform: translateY(-3px);
     }
 
     /* Responsive Styles */
@@ -81,7 +83,7 @@
             max-width: 100%;
         }
 
-        .btn-outline-primary {
+        .btn-custom {
             font-size: 14px;
             padding: 10px 22px;
         }
@@ -93,11 +95,6 @@
         .card-title {
             font-size: 24px;
         }
-    }
-
-    /* Subtle Shadow Effect for Button */
-    .btn-outline-primary.shadow-sm {
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     }
 
     /* Animation for AOS */
